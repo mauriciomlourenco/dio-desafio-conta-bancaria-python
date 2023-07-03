@@ -39,7 +39,10 @@ while True:
                 numero_saques += 1
                 extrato += f"Saque: R$ {valor_saque:.2f} \n"
     elif opcao == 'e':
-        print(extrato + f"**************************************\nSaldo da conta: R$ {saldo:.2f}")
+        if extrato == '':
+            print("Não foram realizadas movimentações.")
+        else:
+            print(extrato + f"**************************************\nSaldo da conta: R$ {saldo:.2f}")
     elif opcao == 'q':
         break
 
